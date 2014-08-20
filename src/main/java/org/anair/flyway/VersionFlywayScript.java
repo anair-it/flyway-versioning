@@ -29,7 +29,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
  */
 public class VersionFlywayScript {
 	// Ignore file names starting with "V" and having "__" in the file name.
-	private static String SQL_FILENAME_PATTERN = "^(V)(\\d)+__";
+	private static String SQL_FILENAME_PATTERN = "^(V)(\\d)+__(.*)";
 	private static String SQL_FILE_SUFFIX = ".sql";
 	private static String PARENT_SQL_FOLDER = "src/main/resources";
 	private static String TIMESTAMP_FORMAT = "yyyyMMddHHmmssSSS";

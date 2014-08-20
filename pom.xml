@@ -44,29 +44,24 @@
 
 
 				<configuration>
-					<driver>oracle.jdbc.OracleDriver</driver>
-					<url>jdbc:oracle:thin:@localhost:1521:xe</url>
+					<driver>org.h2.Driver</driver>
+					<url>jdbc:h2:mem:flyway_db</url>
 					<user>sa</user>
-					<password>sa</password>
+					<password></password>
 					<schemas>
 						<schema>PUBLIC</schema>
 					</schemas>
 					<table>SCHEMA_VERSION</table>
 					<locations>
-						<location>sql</location>
-						<!-- -D parameter that maps to the folder names (local, dev, qa, preprod, 
-							prod) -->
+						<location>0sql</location>
 						<location>local</location>
 					</locations>
 					<sqlMigrationPrefix>V</sqlMigrationPrefix>
 					<sqlMigrationSuffix>.sql</sqlMigrationSuffix>
 					<encoding>ISO-8859-1</encoding>
-					<placeholders>
-						<schemaplaceholder>${DBSCHEMA}</schemaplaceholder>
-					</placeholders>
 					<placeholderPrefix>#[</placeholderPrefix>
 					<placeholderSuffix>]</placeholderSuffix>
-					<outOfOrder>true</outOfOrder>
+					<outOfOrder>false</outOfOrder>
 					<validateOnMigrate>true</validateOnMigrate>
 					<cleanOnValidationError>false</cleanOnValidationError>
 					<initOnMigrate>false</initOnMigrate>
@@ -78,8 +73,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>1.3.166</version>
-			<scope>test</scope>
+			<version>1.4.181</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>

@@ -1,5 +1,5 @@
 CREATE TABLE SYSTEM_CONFIG
 (
-    CNAME varchar(25) NOT NULL,
+    CNAME varchar(25) NOT NULL PRIMARY KEY,
     CVALUE varchar(4000) NOT NULL
 );
