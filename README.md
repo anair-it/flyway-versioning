@@ -28,10 +28,12 @@ Versioning scripts - How to
 	* This will find unversioned sql scripts and version them with a "V" followed by timestamp      
 	* 1\_config\_table\_create.sql  --> V20140820132356560\_\_1\_config\_table\_create.sql 
 
->  If you are in a distributed development environment, ask your team members to follow the above instructions to 
+_Note_: org.anair.flyway.VersionFlywayScript does the versioning. Checkout the class and comments.
+
+>  * If you are in a distributed development environment, ask your team members to follow the above instructions to 
 avoid version conflicts. This process will reduce conflicts, but is still not guaranteed to fix it 100%.     
->  If you are running "flyway:migrate" through Chef/Ansible/Jenkins, make sure "mvn compile test flyway:migrate" is executed. The test will ensure you have versioned scripts.         
->  Running flyway scripts in "outOfOrder" works well for distributed teams.         
+>  * If you are running "flyway:migrate" through Chef/Ansible/Jenkins, make sure "mvn compile test flyway:migrate" is executed. The test will ensure you have versioned scripts.         
+>  * Running flyway scripts in "outOfOrder" works well for distributed teams.         
 
 Running Flyway scripts
 ----------------------
