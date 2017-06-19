@@ -7,9 +7,9 @@ This problem can be averted by versioning the script with a timestamp upto milli
 
 Software Prerequisites
 ----------------------
-1. JDK 6+
+1. JDK 8
 2. Maven 3+
-3. Git
+3. Flyway 4.2.0
 
 Versioning scripts - How to
 --------------------------
